@@ -1,0 +1,16 @@
+header {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.control {
+    width: 300px;
+}
+
+#container {
+margin-left: 40%;
+}
+
+.button {
+    margin-top: 10px;
+}
