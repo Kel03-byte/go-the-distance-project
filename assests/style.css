@@ -1,16 +1,20 @@
 header {
-    font-size: 40px;
-    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .control {
     width: 300px;
+    margin-top: 15px;
 }
 
 #container {
-margin-left: 40%;
+    position: relative;
+    margin-left: 39%;
 }
 
 .button {
-    margin-top: 10px;
+    margin-top: 20px;
+    position: absolute;
+    left: 116px;
 }
