@@ -13,14 +13,14 @@
 </head>
 
 <body>
-    <header>
-        <p class="title is-1-strong">GO THE DISTANCE!</p>
+    <div class="hero is-medium">
+        <p class="title is-1">GO THE DISTANCE!</p>
         <p class="subtitle is-4">Financial Holiday Planner</p>
-    </header>
+    </div>
 
-    <div id="container">
+    <div class="section" id="sign-up-container">
         <div class="control has-icons-left has-icons-right">
-            <input class="input is-rounded" type="name" id="username"placeholder="Name">
+            <input class="input is-rounded" type="name" id="username" placeholder="Name">
             <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
             </span>
@@ -38,11 +38,204 @@
                 <i class="fas fa-unlock-alt"></i>
             </span>
         </div>
-        <div >
-            <button id="submit" class="button is-info">Submit</button>
+        <div>
+            <button id="sign-up-button" class="button is-info">Sign Up</button>
+        </div>
+        <div  class="has-text-white" id="sign-in-text">
+            <p>If you have already signed up then sign in <button class="button is-info"
+                    id="sign-in-button">here!</button></p>
         </div>
     </div>
-<script src="assests/script.js"></script>
+
+    <div class="section" id="sign-in-container">
+        <div class="control has-icons-left has-icons-right">
+            <input class="input is-rounded" type="email" id="user-input-email" placeholder="Email">
+            <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+            </span>
+        </div>
+        <div class="control has-icons-left has-icons-right">
+            <input class="input is-rounded" type="password" id="user-input-password" placeholder="Password">
+            <span class="icon is-small is-left">
+                <i class="fas fa-unlock-alt"></i>
+            </span>
+        </div>
+        <button id="sign-in-button-two" class="button is-info">Sign In</div>button>
+    </div>
+
+    <div class="section" id="holiday-input-container">
+        <form>
+            <p> Select your holiday destination:</p>
+            <div>
+                <select id="destination-list">
+                    <option> ---Destinations--- </option>
+                    <option> Albany </option>
+                    <option> Bunbury </option>
+                    <option> Margret River </option>
+                    <option> Perth </option>
+                    <option> Kalbarri </option>
+                    <option> Denmark </option>
+                    <option> Dunsborough </option>
+                    <option> Busselton </option>
+                    <option> Walpole </option>
+                </select>
+            </div>
+        </form>
+
+        <form>
+            <p>Enter your Holiday Budget Amount:
+                $ <input type="number" id="holiday-budget-total">
+            </p>
+        </form>
+
+        <form>
+            <p>When does your holiday start?
+            <div>
+                <select id="holiday-start-date-list">
+                    <option> ---Date--- </option>
+                    <option> 1 </option>
+                    <option> 2 </option>
+                    <option> 3 </option>
+                    <option> 4 </option>
+                    <option> 5 </option>
+                    <option> 6 </option>
+                    <option> 7 </option>
+                    <option> 8 </option>
+                    <option> 9 </option>
+                    <option> 10 </option>
+                    <option> 11 </option>
+                    <option> 12 </option>
+                    <option> 13 </option>
+                    <option> 14 </option>
+                    <option> 15 </option>
+                    <option> 16 </option>
+                    <option> 17 </option>
+                    <option> 18 </option>
+                    <option> 19 </option>
+                    <option> 20 </option>
+                    <option> 21 </option>
+                    <option> 22 </option>
+                    <option> 23 </option>
+                    <option> 24 </option>
+                    <option> 25 </option>
+                    <option> 26 </option>
+                    <option> 27 </option>
+                    <option> 28 </option>
+                    <option> 29 </option>
+                    <option> 30 </option>
+                    <option> 31 </option>
+                </select>
+                <select id="holiday-start-month-list">
+                    <option> ---Month--- </option>
+                    <option> January </option>
+                    <option> February </option>
+                    <option> March </option>
+                    <option> April </option>
+                    <option> May </option>
+                    <option> June </option>
+                    <option> July </option>
+                    <option> August </option>
+                    <option> September </option>
+                    <option> October </option>
+                    <option> November </option>
+                    <option> December </option>
+                </select>
+                <select id="holiday-start-year-list">
+                    <option> ---Year--- </option>
+                    <option> 2021 </option>
+                    <option> 2022 </option>
+                    <option> 2023 </option>
+                    <option> 2024 </option>
+                    <option> 2025 </option>
+                    <option> 2026 </option>
+                    <option> 2027 </option>
+                    <option> 2028 </option>
+                    <option> 2029 </option>
+                    <option> 2030 </option>
+                </select>
+            </div>
+        </form>
+
+        <form>
+            <p>When does your holiday end?
+            <div>
+                <select id="holiday-end-date-list">
+                    <option> ---Date--- </option>
+                    <option> 1 </option>
+                    <option> 2 </option>
+                    <option> 3 </option>
+                    <option> 4 </option>
+                    <option> 5 </option>
+                    <option> 6 </option>
+                    <option> 7 </option>
+                    <option> 8 </option>
+                    <option> 9 </option>
+                    <option> 10 </option>
+                    <option> 11 </option>
+                    <option> 12 </option>
+                    <option> 13 </option>
+                    <option> 14 </option>
+                    <option> 15 </option>
+                    <option> 16 </option>
+                    <option> 17 </option>
+                    <option> 18 </option>
+                    <option> 19 </option>
+                    <option> 20 </option>
+                    <option> 21 </option>
+                    <option> 22 </option>
+                    <option> 23 </option>
+                    <option> 24 </option>
+                    <option> 25 </option>
+                    <option> 26 </option>
+                    <option> 27 </option>
+                    <option> 28 </option>
+                    <option> 29 </option>
+                    <option> 30 </option>
+                    <option> 31 </option>
+                </select>
+                <select id="holiday-end-month-list">
+                    <option> ---Month--- </option>
+                    <option> January </option>
+                    <option> February </option>
+                    <option> March </option>
+                    <option> April </option>
+                    <option> May </option>
+                    <option> June </option>
+                    <option> July </option>
+                    <option> August </option>
+                    <option> September </option>
+                    <option> October </option>
+                    <option> November </option>
+                    <option> December </option>
+                </select>
+                <select id="holiday-end-year-list">
+                    <option> ---Year--- </option>
+                    <option> 2021 </option>
+                    <option> 2022 </option>
+                    <option> 2023 </option>
+                    <option> 2024 </option>
+                    <option> 2025 </option>
+                    <option> 2026 </option>
+                    <option> 2027 </option>
+                    <option> 2028 </option>
+                    <option> 2029 </option>
+                    <option> 2030 </option>
+                </select>
+            </div>
+        </form>
+
+        <button id="holiday-submit-button">Submit</button>
+
+        <div id="holiday-budget-result"></div>
+
+        <div id="page-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Please make a selection!</p>
+            </div>
+        </div>
+    </div>
+    <script src="assests/script.js"></script>
 </body>
 
 </html>
