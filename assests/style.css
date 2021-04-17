@@ -91,7 +91,7 @@ body {
   cursor: pointer;
 }
 
-@media screen and (min-width: 770px){
+@media screen and (min-width: 760px){
 #sign-up-container {
     padding-left: 30%;
 }
@@ -115,6 +115,6 @@ body {
 }
    
 #sign-in-text {
-    left: 3%;
+    left: 30%;
 }
 }

@@ -22,7 +22,7 @@ signUpButton.addEventListener('click', function (event) {
     if (!email) {
         return
     }
-    if (storedEmail == email){
+    if (storedEmail == email) {
         return alert("you already have singed up before!")
     }
     if (!password) {
@@ -95,19 +95,11 @@ holidaySubmitButton.addEventListener("click", function (event) {
     //local variables for destination, dates and budgeted amount
     var userDestinationList = document.getElementById("destination-list");
     var budgetTotal = document.getElementById("holiday-budget-total").value;
-    var startDateList = document.getElementById("holiday-start-date-list")
-    var startMonthList = document.getElementById("holiday-start-month-list")
-    var startYearList = document.getElementById("holiday-start-year-list")
-    var endDateList = document.getElementById("holiday-end-date-list")
-    var endMonthList = document.getElementById("holiday-end-month-list")
-    var endYearList = document.getElementById("holiday-end-year-list")
     var userDestination = userDestinationList.options[userDestinationList.selectedIndex].text;
-    var startDate = startDateList.options[startDateList.selectedIndex].text;
-    var startMonth = startMonthList.options[startMonthList.selectedIndex].text;
-    var startYear = startYearList.options[startYearList.selectedIndex].text;
-    var endDate = endDateList.options[endDateList.selectedIndex].text;
-    var endMonth = endMonthList.options[endMonthList.selectedIndex].text;
-    var endYear = endYearList.options[endYearList.selectedIndex].text;
+    var dateOne = document.getElementById('start-date').value
+    var dateTwo = document.getElementById('end-date').value
+    var startDate = moment(dateOne).format("DD/MM/YYYY")
+    var endDate = moment(dateTwo).format("DD/MM/YYYY")
 
     //IF statements for when the user does/doesn't enter their input
     if (userDestination == "---Destinations---") {
@@ -116,16 +108,18 @@ holidaySubmitButton.addEventListener("click", function (event) {
     } else if (!budgetTotal) {
         displayModal();
         return
-    } else if (startDate == "---Date---" && startMonth == "---Month---" && startYear == "---Year---") {
+    } else if (!dateOne) {
         displayModal()
-    } else if (endDate == "---Date---" && endMonth == "---Month---" && endYear == "---Year---") {
+        return
+    } else if (!dateTwo) {
         displayModal();
         return
     } else {
+        //If user enters all info then a message is displayed to confirm their input or to resubmit
         event.preventDefault();
         holidayResults.textContent = 'You have selected to holiday at ' + userDestination +
-            ', from: ' + startDate + " " + startMonth + " " + startYear +
-            ', till: ' + endDate + " " + endMonth + " " + endYear +
+            ', from: ' + startDate +
+            ', till: ' + endDate +
             ' with $' + budgetTotal + ' to spend while on holiday, is that correct?'
         holidayResults.append();
         confirmButtonEl.textContent = "Confirm"
