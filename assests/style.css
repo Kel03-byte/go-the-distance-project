@@ -7,10 +7,11 @@
 body {
     background-image: url(./background.jpg);
     background-size: cover;
+    color: white;
 }
 
 #sign-up-container {
-    height: 520px;
+    height: 600px;
     position: relative;
     padding-left: 13%;
 }
@@ -20,7 +21,7 @@ body {
     margin-top: 15px;
 }
 
-#sign-up-button{
+#sign-up-button {
     margin-top: 20px;
     position: absolute;
     left: 160px;
@@ -30,29 +31,121 @@ body {
     position: absolute;
     top: 300px;
     left: 15px;
+    color: white;
 }
 
 #sign-in-button {
-    position: absolute;
-    top: -7px;
-    left: 300px;
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
 }
 
 #sign-in-container {
     display: none;
-    height: 520px;
+    height: 600px;
     position: relative;
     padding-left: 13%;
 }
 
 #sign-in-button-two {
+    margin-top: 20px;
     position: absolute;
-    top: 180px;
     left: 160px;
+    color: white;
 }
 
 #holiday-input-container {
     display: none;
+    height: 600px;
+    position: relative;
+    padding-left: 25%;
+}
+
+#quote {
+    position: relative;
+    top: 100px;
+    left: -10px;
+    width: 350px;
+    font-size: 12px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: white;
+}
+
+#quote p {
+    font-style: normal;
+}
+
+#sign-out-button {
+    position: absolute;
+    top:0px;
+    left:20px;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: underline;
+    color: white;
+}
+
+#sign-out-button-two {
+    position: absolute;
+    top:0px;
+    left:20px;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: underline;
+    color: white;
+}
+
+#destination-list {
+    width: 200px;
+    margin-top: 5px; 
+    margin-bottom: 20px; 
+}
+
+#holiday-budget-total {
+    width: 200px;
+    margin-top: 5px; 
+    margin-bottom: 20px; 
+}
+
+#start-date {
+    width: 200px;
+    margin-top: 5px; 
+    margin-bottom: 20px; 
+}
+
+#end-date {
+    width: 200px;
+    margin-top: 5px; 
+    margin-bottom: 20px; 
+}
+
+.holiday-input-button {
+    margin-top: 40px;
+    margin-right: 50px;
+    position: absolute;
+    top: -15px;
+    left: 60px;
+}
+
+#holiday-budget-result {
+    position: relative;
+    left: -80px;
+    width: 390px
+}
+
+.confirm-button {
+    position: absolute;
+    left: -90px;
+    top: 40px;
+}
+
+#expense-input-container {
+    display: none;
+    height: 600px;
+    position: relative;
+    padding-left: 20%;
 }
 
 .modal {
@@ -69,6 +162,7 @@ body {
 }
 
 .modal-content {
+    position: relative;
     background-color: #fefefe;
     margin: 15% auto;
     padding: 20px;
@@ -76,52 +170,6 @@ body {
     #888;
     width: 80%;
 }
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 760px){
-#sign-up-container {
-    padding-left: 30%;
-}
-
-#sign-up-button {
-    left: 340px;
-}
-
-#sign-in-text {
-    left: 25%;
-}
-}
-
-@media screen and (min-width: 990px){
-#sign-up-container {
-    padding-left: 35%;
-}
-    
-#sign-up-button {
-    left: 450px;
-}
-   
-#sign-in-text {
-    left: 30%;
-}
-}
-
-
-
-
 
 .expenseModal {
     display: none; 
@@ -165,11 +213,87 @@ input[type=text], select{
     border-radius: 10px;
 }
 
-input[type=submit]{
+input[type=submit] {
     padding: 15px 20px;
     margin: 10px 0;
     border-radius: 5px;
     position: absolute;
     left: 280px;
     top: 280px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 760px) {
+#sign-up-container {
+    padding-left: 30%;
+}
+
+#sign-up-button {
+    left: 340px;
+}
+
+#sign-in-text {
+    left: 25%;
+}
+
+#sign-in-container {
+    padding-left: 30%;
+}
+
+#sign-in-button-two {
+    left: 330px;
+}
+
+#holiday-submit-button {
+    position: absolute;
+    left: 340px;
+    top: 300px
+}
+
+#holiday-budget-result {
+    left: -80px;
+    width: fit-content;
+}
+.confirm-button {
+    left: -200px;
+}
+}
+
+@media screen and (min-width: 990px) {
+#sign-up-container {
+    padding-left: 35%;
+}
+    
+#sign-up-button {
+    left: 460px;
+}
+   
+#sign-in-text {
+    left: 30%;
+}
+
+#sign-in-container {
+    padding-left: 35%;
+}
+
+#sign-in-button-two {
+    left: 460px;
+}
+
+.confirm-button {
+    left: 30px;
+}
 }

@@ -48,6 +48,10 @@
     </div>
 
     <div class="section" id="sign-in-container">
+        
+        <div class="section has-text-white" id="holiday-input-container">
+            <p id="sign-out-button">Sign Out</p>
+
         <div class="control has-icons-left has-icons-right">
             <input class="input is-rounded" type="email" id="user-input-email" placeholder="Email">
             <span class="icon is-small is-left">
@@ -110,36 +114,40 @@
             </div>
         </div>
     </div>
-    <script src="assests/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
-    <!-- Modal button -->
-    <button id="addExpenseButton">Add Expense</button>
+    <div id="expense-input-container">
+        <p id="sign-out-button-two">Sign Out</p>
 
-    <!-- Modal container-->
-    <div id="expenseModal" class="expenseModal">
-        <!-- Modal content -->
-        <div class="modalContent">
-            <span class="closeButton">&times;</span>
-            <form id="expenseForm">
-                <label> Expense name: </label>
-                <input type="text" id="expenseName">
-                <label>Amount: </label>
-                <input type="text" id="expenseAmount" placeholder="$">
-                <label> Catagory: </label>
-                <select id="expenseCatagory">
-                    <option value="" disabled selected>Select</option>
-                    <option value="trasportation">Transportation</option>
-                    <option value="food">Food</option>
-                    <option value="accomodation">Accomodation</option>
-                    <option value="entertainment">Entertainment</option>
-                </select>
-                <input type="submit" id="submitButton" class="button is-info">
-            </form>
+        <div class="subtitle is-4 has-text-white" id="expenseTitle"></div>
+        <!-- Modal button -->
+        <button id="addExpenseButton">Add Expense</button>
+
+        <!-- Modal container-->
+        <div id="expenseModal" class="expenseModal">
+            <!-- Modal content -->
+            <div class="modalContent">
+                <span class="closeButton">&times;</span>
+                <form id="expenseForm">
+                    <label> Expense name: </label>
+                    <input type="text" id="expenseName">
+                    <label>Amount: </label>
+                    <input type="text" id="expenseAmount" placeholder="$">
+                    <label> Catagory: </label>
+                    <select id="expenseCatagory">
+                        <option value="" disabled selected>Select</option>
+                        <option value="trasportation">Transportation</option>
+                        <option value="food">Food</option>
+                        <option value="accomodation">Accomodation</option>
+                        <option value="entertainment">Entertainment</option>
+                    </select>
+                    <input type="submit" id="submitButton" class="button is-info">
+                </form>
+            </div>
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="assests/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
 </body>
 
