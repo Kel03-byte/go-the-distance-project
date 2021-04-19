@@ -255,4 +255,3 @@ var expenseAmount = localStorage.getItem("expenseAmount")
 
 
 var expenseCatagory = localStorage.getItem("expenseCatagory")
-

@@ -204,7 +204,7 @@ body {
     font-size: 20px;
 }
   
-input[type=text], select{
+input[type=text], select {
     width: 100%;
     padding: 15px 0px 15px 5px;
     margin: 10px 0px; 
