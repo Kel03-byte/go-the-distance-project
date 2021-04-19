@@ -21,7 +21,7 @@ body {
     margin-top: 15px;
 }
 
-#sign-up-button{
+#sign-up-button {
     margin-top: 20px;
     position: absolute;
     left: 160px;
@@ -171,6 +171,20 @@ body {
     width: 80%;
 }
 
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .expenseModal {
     display: none; 
     position: fixed; 
@@ -204,7 +218,7 @@ body {
     font-size: 20px;
 }
   
-input[type=text], select{
+input[type=text], select {
     width: 100%;
     padding: 15px 0px 15px 5px;
     margin: 10px 0px; 
@@ -213,7 +227,7 @@ input[type=text], select{
     border-radius: 10px;
 }
 
-input[type=submit]{
+input[type=submit] {
     padding: 15px 20px;
     margin: 10px 0;
     border-radius: 5px;
@@ -222,21 +236,7 @@ input[type=submit]{
     top: 280px;
 }
 
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-@media screen and (min-width: 760px){
+@media screen and (min-width: 760px) {
 #sign-up-container {
     padding-left: 30%;
 }
@@ -272,7 +272,7 @@ input[type=submit]{
 }
 }
 
-@media screen and (min-width: 990px){
+@media screen and (min-width: 990px) {
 #sign-up-container {
     padding-left: 35%;
 }
@@ -296,54 +296,4 @@ input[type=submit]{
 .confirm-button {
     left: 30px;
 }
-
-.expenseModal {
-    display: none; 
-    position: fixed; 
-    z-index: 1;
-    padding-top: 100px; 
-    left: 0;
-    top: 0;
-    width: 100%; 
-    height: 100%;    
-}
-  
-  /* Modal Content */
-.modalContent {
-    background-color: white;
-    margin: auto;
-    padding: 20px;
-    padding-bottom: 80px;
-    border: 1px solid rgb(0, 0, 0);
-    width: 50%;
-    display: block;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.5);
-    position: relative;
-}
-  
-  /* The Close Button */
-.closeButton {
-    color: black;
-    float: right;
-    margin-right: 10px;
-    font-size: 20px;
-}
-  
-input[type=text], select{
-    width: 100%;
-    padding: 15px 0px 15px 5px;
-    margin: 10px 0px; 
-    display: inline-block;
-    border: 1px solid rgb(221, 221, 221);
-    border-radius: 10px;
-}
-
-input[type=submit]{
-    padding: 15px 20px;
-    margin: 10px 0;
-    border-radius: 5px;
-    position: absolute;
-    left: 280px;
-    top: 280px;
 }
