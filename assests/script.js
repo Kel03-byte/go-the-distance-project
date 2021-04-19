@@ -244,4 +244,4 @@ submitButton.onclick = function (event) {
         displayModal()
         console.log("please make a submission")
     }
-
+};
