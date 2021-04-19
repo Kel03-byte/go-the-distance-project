@@ -42,19 +42,36 @@
         </div>
 
         <div>
-            <button id="sign-up-button" class="button is-info">Sign Up</button>
+            <button class="button is-info" id="sign-up-button" >Sign Up</button>
         </div>
         <div class="has-text-white" id="sign-in-text">
-            <p>If you have already signed up then sign in <button class="button is-info"
-                    id="sign-in-button">here!</button></p>
+            <p>If you have already signed up then sign in <a id="sign-in-button">here!</a></p>
         </div>
+
+        <div id="quote"></div>
+
     </div>
 
     <div class="section" id="sign-in-container">
-        
+
         <div class="section has-text-white" id="holiday-input-container">
             <p id="sign-out-button">Sign Out</p>
 
+<<<<<<< HEAD
+            <div class="control has-icons-left has-icons-right">
+                <input class="input is-rounded" type="email" id="user-input-email" placeholder="Email">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-envelope"></i>
+                </span>
+            </div>
+            <div class="control has-icons-left has-icons-right">
+                <input class="input is-rounded" type="password" id="user-input-password" placeholder="Password">
+                <span class="icon is-small is-left">
+                    <i class="fas fa-unlock-alt"></i>
+                </span>
+            </div>
+            <button id="sign-in-button-two" class="button is-info">Sign In<button>
+=======
         <div>
             <button id="sign-up-button" class="button is-info">Sign Up</button>
         </div>
@@ -81,12 +98,11 @@
             <span class="icon is-small is-left">
                 <i class="fas fa-unlock-alt"></i>
             </span>
+>>>>>>> 85f0178becfd2ed145f6273b76dbbc5d9be69af7
         </div>
-        <button id="sign-in-button-two" class="button is-info">Sign In<button>
-    </div>
     </div>
 
-    <div class="section has-text-white" id="holiday-input-container">
+    <div class="section" id="holiday-input-container">
         <form>
             <p> Select your holiday destination:</p>
             <div>
@@ -138,12 +154,15 @@
             <label for="end-date">When does your holiday end? </label>
 
             <input type="date" id="end-date" name="end-date">
+
+            <button id="holiday-submit-button">Submit</button>
         </div>
 
-        <button id="holiday-submit-button">Submit</button>
 
+
+<<<<<<< HEAD
         <div id="holiday-budget-result"></div>
-
+=======
         <div id="page-modal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -165,10 +184,26 @@
             <span class="close">&times;</span>
             <p>Please make a selection!..</p>
         </div>
+>>>>>>> 85f0178becfd2ed145f6273b76dbbc5d9be69af7
     </div>
 
     <div id="expense-input-container">
         <p id="sign-out-button-two">Sign Out</p>
+
+        <div id=expense-table>
+            <table style="width:100%">
+                <tr>
+                    <th>Catagory</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                    <td id="table-catagory"></td>
+                    <td id="table-amount"></td>
+                </tr>
+                <tr>
+                </tr>
+            </table>
+        </div>
 
         <div class="subtitle is-4 has-text-white" id="expenseTitle"></div>
 
@@ -204,7 +239,19 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
+
+    <div id="pageModal" class="modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Please make a selection!..</p>
+        </div>
+
+    </div>
+=======
     
+>>>>>>> 85f0178becfd2ed145f6273b76dbbc5d9be69af7
     <script src="assests/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 

@@ -68,7 +68,6 @@ function displayQuote() {
         })
 };
 
-
 function signUpUser(event) {
     event.preventDefault();
     var userName = userNameInput.value;
@@ -245,6 +244,9 @@ submitButton.onclick = function (event) {
         displayModal()
         console.log("please make a submission")
     }
+<<<<<<< HEAD
+}
+=======
 }
 var expenseName = localStorage.getItem("expenseName")
 
@@ -254,3 +256,4 @@ var expenseAmount = localStorage.getItem("expenseAmount")
 
 var expenseCatagory = localStorage.getItem("expenseCatagory")
 
+>>>>>>> 85f0178becfd2ed145f6273b76dbbc5d9be69af7
