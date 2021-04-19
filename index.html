@@ -130,19 +130,7 @@
 
         <div class="subtitle is-4 has-text-white" id="expenseTitle"></div>
 
-        <div id="expense-table">
-            <table>
-                <tr>
-                    <th>Catagory</th>
-                    <th>Amount</th>
-                </tr>
-                <tr>
-                    <td id="table-catagory"></td>
-                    <td id="table-amount"></td>
-                  </tr>
-
-            </table>
-        </div>
+        <div id="expense-table"></div>
 
         <button id="addExpenseButton">Add Expense</button>
 
@@ -169,34 +157,6 @@
             </div>
         </div>
     </diV>
-
-    
-
-    <!-- Modal button -->
-    <button id="addExpenseButton">Add Expense</button>
-
-    <!-- Modal container-->
-    <div id="expenseModal" class="expenseModal">
-        <!-- Modal content -->
-        <div class="modalContent">
-            <span class="closeButton">&times;</span>
-            <form id="expenseForm">
-                <label> Expense name: </label>
-                <input type="text" id="expenseName">
-                <label>Amount: </label>
-                <input type="text" id="expenseAmount" placeholder="$">
-                <label> Catagory: </label>
-                <select id="expenseCatagory">
-                    <option value="" disabled selected>Select</option>
-                    <option value="trasportation">Transportation</option>
-                    <option value="food">Food</option>
-                    <option value="accomodation">Accomodation</option>
-                    <option value="entertainment">Entertainment</option>
-                </select>
-                <input type="submit" id="submitButton" class="button is-info">
-            </form>
-        </div>
-    </div>
     
     <script src="assests/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>

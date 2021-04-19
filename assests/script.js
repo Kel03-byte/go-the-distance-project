@@ -246,10 +246,3 @@ submitButton.onclick = function (event) {
         console.log("please make a submission")
     }
 }
-var expenseName = localStorage.getItem("expenseName")
-
-
-var expenseAmount = localStorage.getItem("expenseAmount")
-
-
-var expenseCatagory = localStorage.getItem("expenseCatagory")
