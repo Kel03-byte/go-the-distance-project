@@ -94,27 +94,20 @@
 
         <form>
             <p>Enter your Holiday Budget Amount:
-
-                $ <input type="number" id="holiday-budget-total">
-
                 $ <input class="input is-rounded " type="number" id="holiday-budget-total">
             </p>
         </form>
 
         <div>
             <label for="start-date">When does your holiday start? </label>
-
-            <input type="date" id="start-date" name="start-date">
-
             <input class="input is-rounded " type="date" id="start-date" name="start-date">
         </div>
 
         <div>
             <label for="end-date">When does your holiday end? </label>
+            <input class="input is-rounded " type="date" id="end-date" name="end-date">
 
-            <input type="date" id="end-date" name="end-date">
-
-            <button id="holiday-submit-button">Submit</button>
+            <button id="holiday-submit-button" class="button is-info">Submit</button>
         </div>
 
         <div id="holiday-budget-result"></div>
@@ -123,11 +116,11 @@
 
     <div id="expense-input-container">
 
-        <p id="sign-out-button-two">Sign Out</p>
-
+        <div><p id="sign-out-button-two">Sign Out</p></div>
+        <div class="has-text-white"id="expenseTitle"></div>
         <div id="expense-input-list"></div>
 
-        <button id="addExpenseButton">Add Expense</button>
+        <button id="addExpenseButton" class="button is-info">Add Expense</button>
 
         <!-- Modal container-->
         <div id="expenseModal" class="expenseModal">
