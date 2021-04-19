@@ -21,7 +21,7 @@ body {
     margin-top: 15px;
 }
 
-#sign-up-button{
+#sign-up-button {
     margin-top: 20px;
     position: absolute;
     left: 160px;
@@ -213,7 +213,7 @@ input[type=text], select{
     border-radius: 10px;
 }
 
-input[type=submit]{
+input[type=submit] {
     padding: 15px 20px;
     margin: 10px 0;
     border-radius: 5px;
@@ -236,7 +236,7 @@ input[type=submit]{
   cursor: pointer;
 }
 
-@media screen and (min-width: 760px){
+@media screen and (min-width: 760px) {
 #sign-up-container {
     padding-left: 30%;
 }
@@ -272,7 +272,7 @@ input[type=submit]{
 }
 }
 
-@media screen and (min-width: 990px){
+@media screen and (min-width: 990px) {
 #sign-up-container {
     padding-left: 35%;
 }
