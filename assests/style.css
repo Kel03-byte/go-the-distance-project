@@ -296,4 +296,54 @@ input[type=submit] {
 .confirm-button {
     left: 30px;
 }
+
+.expenseModal {
+    display: none; 
+    position: fixed; 
+    z-index: 1;
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;    
+}
+  
+  /* Modal Content */
+.modalContent {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    padding-bottom: 80px;
+    border: 1px solid rgb(0, 0, 0);
+    width: 50%;
+    display: block;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.5);
+    position: relative;
+}
+  
+  /* The Close Button */
+.closeButton {
+    color: black;
+    float: right;
+    margin-right: 10px;
+    font-size: 20px;
+}
+  
+input[type=text], select{
+    width: 100%;
+    padding: 15px 0px 15px 5px;
+    margin: 10px 0px; 
+    display: inline-block;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 10px;
+}
+
+input[type=submit]{
+    padding: 15px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    position: absolute;
+    left: 280px;
+    top: 280px;
 }
