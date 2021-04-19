@@ -26,18 +26,21 @@
             </span>
             </span>
         </div>
+
         <div class="control has-icons-left has-icons-right">
             <input class="input is-rounded" type="email" id="email" placeholder="Email">
             <span class="icon is-small is-left">
                 <i class="fas fa-envelope"></i>
             </span>
         </div>
+
         <div class="control has-icons-left has-icons-right">
             <input class="input is-rounded" type="password" id="password" placeholder="Password">
             <span class="icon is-small is-left">
                 <i class="fas fa-unlock-alt"></i>
             </span>
         </div>
+
         <div>
             <button class="button is-info" id="sign-up-button" >Sign Up</button>
         </div>
@@ -54,6 +57,7 @@
         <div class="section has-text-white" id="holiday-input-container">
             <p id="sign-out-button">Sign Out</p>
 
+<<<<<<< HEAD
             <div class="control has-icons-left has-icons-right">
                 <input class="input is-rounded" type="email" id="user-input-email" placeholder="Email">
                 <span class="icon is-small is-left">
@@ -67,6 +71,34 @@
                 </span>
             </div>
             <button id="sign-in-button-two" class="button is-info">Sign In<button>
+=======
+        <div>
+            <button id="sign-up-button" class="button is-info">Sign Up</button>
+        </div>
+
+        <div class="has-text-white" id="sign-in-text">
+            <p>If you have already signed up then sign in <a id="sign-in-button">here!</a></p>
+        </div>
+
+        <div id="quote"></div>
+
+    </div>
+
+    <div class="section" id="sign-in-container">
+
+        <div class="control has-icons-left has-icons-right">
+            <input class="input is-rounded" type="email" id="user-input-email" placeholder="Email">
+            <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+            </span>
+        </div>
+
+        <div class="control has-icons-left has-icons-right">
+            <input class="input is-rounded" type="password" id="user-input-password" placeholder="Password">
+            <span class="icon is-small is-left">
+                <i class="fas fa-unlock-alt"></i>
+            </span>
+>>>>>>> 85f0178becfd2ed145f6273b76dbbc5d9be69af7
         </div>
     </div>
 
@@ -75,6 +107,18 @@
             <p> Select your holiday destination:</p>
             <div>
                 <select id="destination-list">
+
+        <button id="sign-in-button-two" class="button is-info">Sign In</button>
+
+    </div>
+
+    <div class="section has-text-white" id="holiday-input-container">
+        <p id="sign-out-button">Sign Out</p>
+
+        <form>
+            <p> Select your holiday destination:</p>
+            <div>
+                <select class="input is-rounded " id="destination-list">
                     <option> ---Destinations--- </option>
                     <option> Albany </option>
                     <option> Bunbury </option>
@@ -91,17 +135,24 @@
 
         <form>
             <p>Enter your Holiday Budget Amount:
+
                 $ <input type="number" id="holiday-budget-total">
+
+                $ <input class="input is-rounded " type="number" id="holiday-budget-total">
             </p>
         </form>
 
         <div>
             <label for="start-date">When does your holiday start? </label>
+
             <input type="date" id="start-date" name="start-date">
+
+            <input class="input is-rounded " type="date" id="start-date" name="start-date">
         </div>
 
         <div>
             <label for="end-date">When does your holiday end? </label>
+
             <input type="date" id="end-date" name="end-date">
 
             <button id="holiday-submit-button">Submit</button>
@@ -109,7 +160,31 @@
 
 
 
+<<<<<<< HEAD
         <div id="holiday-budget-result"></div>
+=======
+        <div id="page-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Please make a selection!</p>
+            </div>
+        </div>
+
+            <input class="input is-rounded" type="date" id="end-date" name="end-date">
+        </div>
+
+        <button class="button is-info holiday-input-button" id="holiday-submit-button">Submit</button>
+
+        <div id="holiday-budget-result"></div>
+
+    </div>
+
+    <div id="pageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Please make a selection!..</p>
+        </div>
+>>>>>>> 85f0178becfd2ed145f6273b76dbbc5d9be69af7
     </div>
 
     <div id="expense-input-container">
@@ -129,6 +204,13 @@
                 </tr>
             </table>
         </div>
+
+        <div class="subtitle is-4 has-text-white" id="expenseTitle"></div>
+
+        <!-- Modal button -->
+
+       <div id="expense-input-container">
+        <p id="sign-out-button-two">Sign Out</p>
 
         <div class="subtitle is-4 has-text-white" id="expenseTitle"></div>
         <!-- Modal button -->
@@ -157,6 +239,7 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 
     <div id="pageModal" class="modal">
 
@@ -166,6 +249,9 @@
         </div>
 
     </div>
+=======
+    
+>>>>>>> 85f0178becfd2ed145f6273b76dbbc5d9be69af7
     <script src="assests/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 
