@@ -68,7 +68,6 @@ function displayQuote() {
         })
 };
 
-
 function signUpUser(event) {
     event.preventDefault();
     var userName = userNameInput.value;
@@ -245,4 +244,4 @@ submitButton.onclick = function (event) {
         displayModal()
         console.log("please make a submission")
     }
-}
+
