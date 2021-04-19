@@ -141,11 +141,27 @@ body {
     top: 40px;
 }
 
+#holiday-budget-total {
+    width: 200px;
+    margin-top: 5px; 
+    margin-bottom: 20px; 
+}
+
 #expense-input-container {
     display: none;
     height: 600px;
     position: relative;
     padding-left: 20%;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid 
+    #888;
+    width: 80%;
 }
 
 .modal {
@@ -169,6 +185,20 @@ body {
     border: 1px solid 
     #888;
     width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .expenseModal {
@@ -204,7 +234,7 @@ body {
     font-size: 20px;
 }
   
-input[type=text], select{
+input[type=text], select {
     width: 100%;
     padding: 15px 0px 15px 5px;
     margin: 10px 0px; 
@@ -220,20 +250,6 @@ input[type=submit] {
     position: absolute;
     left: 280px;
     top: 280px;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 760px) {
