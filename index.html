@@ -44,6 +44,20 @@
         <div>
             <button id="sign-up-button" class="button is-info">Sign Up</button>
         </div>
+        <div class="has-text-white" id="sign-in-text">
+            <p>If you have already signed up then sign in <button class="button is-info"
+                    id="sign-in-button">here!</button></p>
+        </div>
+    </div>
+
+    <div class="section" id="sign-in-container">
+        
+        <div class="section has-text-white" id="holiday-input-container">
+            <p id="sign-out-button">Sign Out</p>
+
+        <div>
+            <button id="sign-up-button" class="button is-info">Sign Up</button>
+        </div>
 
         <div class="has-text-white" id="sign-in-text">
             <p>If you have already signed up then sign in <a id="sign-in-button">here!</a></p>
@@ -68,6 +82,15 @@
                 <i class="fas fa-unlock-alt"></i>
             </span>
         </div>
+        <button id="sign-in-button-two" class="button is-info">Sign In<button>
+    </div>
+    </div>
+
+    <div class="section has-text-white" id="holiday-input-container">
+        <form>
+            <p> Select your holiday destination:</p>
+            <div>
+                <select id="destination-list">
 
         <button id="sign-in-button-two" class="button is-info">Sign In</button>
 
@@ -96,17 +119,38 @@
 
         <form>
             <p>Enter your Holiday Budget Amount:
+
+                $ <input type="number" id="holiday-budget-total">
+
                 $ <input class="input is-rounded " type="number" id="holiday-budget-total">
             </p>
         </form>
 
         <div>
             <label for="start-date">When does your holiday start? </label>
+
+            <input type="date" id="start-date" name="start-date">
+
             <input class="input is-rounded " type="date" id="start-date" name="start-date">
         </div>
 
         <div>
             <label for="end-date">When does your holiday end? </label>
+
+            <input type="date" id="end-date" name="end-date">
+        </div>
+
+        <button id="holiday-submit-button">Submit</button>
+
+        <div id="holiday-budget-result"></div>
+
+        <div id="page-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Please make a selection!</p>
+            </div>
+        </div>
+
             <input class="input is-rounded" type="date" id="end-date" name="end-date">
         </div>
 
@@ -117,12 +161,10 @@
     </div>
 
     <div id="pageModal" class="modal">
-
         <div class="modal-content">
             <span class="close">&times;</span>
             <p>Please make a selection!..</p>
         </div>
-
     </div>
 
     <div id="expense-input-container">
@@ -130,20 +172,13 @@
 
         <div class="subtitle is-4 has-text-white" id="expenseTitle"></div>
 
-        <div id="expense-table">
-            <table>
-                <tr>
-                    <th>Catagory</th>
-                    <th>Amount</th>
-                </tr>
-                <tr>
-                    <td id="table-catagory"></td>
-                    <td id="table-amount"></td>
-                  </tr>
+        <!-- Modal button -->
 
-            </table>
-        </div>
+       <div id="expense-input-container">
+        <p id="sign-out-button-two">Sign Out</p>
 
+        <div class="subtitle is-4 has-text-white" id="expenseTitle"></div>
+        <!-- Modal button -->
         <button id="addExpenseButton">Add Expense</button>
 
         <!-- Modal container-->
@@ -168,38 +203,11 @@
                 </form>
             </div>
         </div>
-    </diV>
-
-    
-
-    <!-- Modal button -->
-    <button id="addExpenseButton">Add Expense</button>
-
-    <!-- Modal container-->
-    <div id="expenseModal" class="expenseModal">
-        <!-- Modal content -->
-        <div class="modalContent">
-            <span class="closeButton">&times;</span>
-            <form id="expenseForm">
-                <label> Expense name: </label>
-                <input type="text" id="expenseName">
-                <label>Amount: </label>
-                <input type="text" id="expenseAmount" placeholder="$">
-                <label> Catagory: </label>
-                <select id="expenseCatagory">
-                    <option value="" disabled selected>Select</option>
-                    <option value="trasportation">Transportation</option>
-                    <option value="food">Food</option>
-                    <option value="accomodation">Accomodation</option>
-                    <option value="entertainment">Entertainment</option>
-                </select>
-                <input type="submit" id="submitButton" class="button is-info">
-            </form>
-        </div>
     </div>
     
     <script src="assests/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
 </body>
 
 </html>
