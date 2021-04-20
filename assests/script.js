@@ -52,7 +52,7 @@ function displayExpenseInputContainer() {
     signInContainer.style.display = "none"
     holidayInputContainer.style.display = "none"
     expenseInputContainer.style.display = "block"
-    expenseTitle.innerHTML = storedUserName + "'s " + storedDestination + " HOLIDAY!"
+    expenseTitle.innerHTML = storedUserName + "'S " + storedDestination + " HOLIDAY!"
 }
 
 //Function to fetch and display a random quote
@@ -168,7 +168,7 @@ function storeUserHolidayInput() {
 
 //Event listeners to "sign up", to sign out, to confirm holiday details, to go to the "sign in" page
 // and when signing in again from the "sign in" page instead of the sign up page
-signUpButton.addEventListener('click', signUpUser)
+signUpButton.addEventListener('click', displayExpenseInputContainer)
 signOutOneButton.addEventListener('click', function () { location.reload() });
 signOutTwoButton.addEventListener('click', function () { location.reload() });
 confirmButtonEl.addEventListener('click',
@@ -218,13 +218,13 @@ var submitButton = document.getElementById("submitButton")
 submitButton.onclick = function (event) {
     event.preventDefault();
     var expenseName = document.getElementById("expenseName").value;
-    localStorage.setItem("expenseName", JSON.stringify(expenseName))
+    localStorage.setItem("expenseName", expenseName)
 
     var expenseAmount = document.getElementById("expenseAmount").value;
-    localStorage.setItem("expenseAmount", JSON.stringify(expenseAmount))
+    localStorage.setItem("expenseAmount", expenseAmount)
 
     var expenseCatagory = document.getElementById("expenseCatagory").value;
-    localStorage.setItem("expenseCatagory", JSON.stringify(expenseCatagory))
+    localStorage.setItem("expenseCatagory", expenseCatagory)
 
     if (!expenseName) {
         displayModal();
