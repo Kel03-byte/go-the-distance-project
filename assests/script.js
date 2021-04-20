@@ -52,7 +52,7 @@ function displayExpenseInputContainer() {
     signInContainer.style.display = "none"
     holidayInputContainer.style.display = "none"
     expenseInputContainer.style.display = "block"
-    expenseTitle.innerHTML = storedUserName+"'s "+storedDestination+" Holiday!"
+    expenseTitle.innerHTML = storedUserName + "'S " + storedDestination + " HOLIDAY!"
 }
 
 //Function to fetch and display a random quote
@@ -68,9 +68,10 @@ function displayQuote() {
         })
 };
 
+//Signs the user up to the website
 function signUpUser(event) {
     event.preventDefault();
-    var userName = userNameInput.value;
+    var userName = userNameInput.value.trim().toUpperCase();
     var email = userEmailInput.value;
     var password = userPasswordInput.value;
 
@@ -122,7 +123,7 @@ function getUserInformation() {
 //Event listener to collect user's input
 holidaySubmitButton.addEventListener("click", function (event) {
     var holidayResults = document.getElementById("holiday-budget-result")
-    var userDestination = document.getElementById("destination-list").value;
+    var userDestination = document.getElementById("destination-list").value.trim().toUpperCase();
     var budgetTotal = document.getElementById("holiday-budget-total").value;
     var dateOne = document.getElementById('start-date').value
     var dateTwo = document.getElementById('end-date').value
@@ -152,22 +153,22 @@ holidaySubmitButton.addEventListener("click", function (event) {
             ' with $' + budgetTotal + ' to spend while on holiday, is that correct?'
         holidayResults.append();
         confirmButtonEl.textContent = "Confirm"
-        confirmButtonEl.classList = "button is-info confirm-button"
+        confirmButtonEl.classList = "button is-success confirm-button"
         holidayResults.appendChild(confirmButtonEl)
     }
 });
 
-function storeUserHolidayInput (){
-    var userDestination = document.getElementById("destination-list").value;
+//Stores Holiday Information into local storage
+function storeUserHolidayInput() {
+    var userDestination = document.getElementById("destination-list").value.trim().toUpperCase();
     var budgetTotal = document.getElementById("holiday-budget-total").value;
     localStorage.setItem("Destination", userDestination)
     localStorage.setItem("Budget Total", budgetTotal)
 }
 
-
-//Event listeners to sign out, confirm holiday details, to go to the sign in again page
-// and when signing in again from the sign in page instead of the sign up page
-signUpButton.addEventListener('click', signUpUser)
+//Event listeners to "sign up", to sign out, to confirm holiday details, to go to the "sign in" page
+// and when signing in again from the "sign in" page instead of the sign up page
+signUpButton.addEventListener('click', displayExpenseInputContainer)
 signOutOneButton.addEventListener('click', function () { location.reload() });
 signOutTwoButton.addEventListener('click', function () { location.reload() });
 confirmButtonEl.addEventListener('click',
@@ -197,6 +198,8 @@ window.onclick = function (event) {
     }
 }
 
+//Variables and Function to display a modal for the user to input expense information in
+//which is saved to local storage
 var expenseModal = document.getElementById("expenseModal");
 var addExpenseButton = document.getElementById("addExpenseButton");
 var closeButton = document.getElementsByClassName("closeButton")[0];
@@ -211,37 +214,85 @@ closeButton.onclick = function () {
 
 var submitButton = document.getElementById("submitButton")
 
+//On submitting the expense values the inputted information is then saved to local storage and displayed in the table
 submitButton.onclick = function (event) {
-    event.preventDefault()
-
+    event.preventDefault();
     var expenseName = document.getElementById("expenseName").value;
-    localStorage.setItem("expenseName", JSON.stringify(expenseName))
+    localStorage.setItem("expenseName", expenseName)
 
     var expenseAmount = document.getElementById("expenseAmount").value;
-    localStorage.setItem("expenseAmount", JSON.stringify(expenseAmount))
+    localStorage.setItem("expenseAmount", expenseAmount)
 
     var expenseCatagory = document.getElementById("expenseCatagory").value;
-    localStorage.setItem("expenseCatagory", JSON.stringify(expenseCatagory))
+    localStorage.setItem("expenseCatagory", expenseCatagory)
 
-    if (expenseName == "") {
-        displayModal()
-        console.log("please make a submission")
+    if (!expenseName) {
+        displayModal();
+        return
+    } else if (!expenseAmount) {
+        displayModal();
+    } else if (!expenseCatagory) {
+        displayModal();
+        return
+    } else {
+
+        var nameListEl = $('#name-list')
+
+        var expenseNameItem = $("<ul><li>" + expenseName + "</li></ul>");
+
+        expenseNameItem.appendTo(nameListEl);
+
+        $(expenseName);
+
+
+
+        var amountListEl = $('#amount-list')
+
+        var expenseAmountItem = $("<ul><li>" + expenseAmount + "</li></ul>");
+
+        expenseAmountItem.appendTo(amountListEl);
+
+        $(expenseAmount);
+
+
+
+        var catagoryListEl = $('#catagory-list')
+
+        var expenseCatagoryItem = $("<ul><li>" + expenseCatagory + "</li></ul>");
+
+        expenseCatagoryItem.appendTo(catagoryListEl);
+
+        $(expenseCatagory);
+
+
+        expenseModal.style.display = "none";
+
+
+        if (expenseCatagory === "Transportation") {
+            console.log("it worked")
+
+        }
+
+        else if (expenseCatagory === "Food") {
+            console.log("it worked2")
+
+
+        }
+
+        else if (expenseCatagory === "Accomodation") {
+            console.log("it worked3")
+
+
+        }
+
+        else if (expenseCatagory === "Entertainment") {
+            console.log("it worked4")
+
+
+        }
+
     }
 
-    if (expenseAmount == "") {
-        displayModal()
-        console.log("please make a submission")
-    }
-
-    if (expenseAmount != Number) {
-        displayModal()
-        console.log("please submit a number")
-    }
-
-    if (expenseCatagory == "") {
-        displayModal()
-        console.log("please make a submission")
-    }
 };
 
 //Auotcomplete for User Destination
@@ -259,3 +310,6 @@ function autoComplete() {
 }
 
 google.maps.event.addDomListener(window, 'load', autoComplete);
+
+};
+

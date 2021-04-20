@@ -10,28 +10,46 @@ body {
     color: white;
 }
 
+/* The "Sign Up" Page Style */
 #sign-up-container {
     height: 600px;
     position: relative;
-    padding-left: 13%;
+    left: 13%;
+}
+
+#sign-up-button {
+    position: absolute;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    top: 150px;
+    left: 100px;
+}
+
+#sign-in-text {
+    position: absolute;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    top: 200px;
+}
+
+#quote {
+    position: absolute;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    top: 240px;
+    width: 380px;
+    font-style: italic;
+    font-size: 10px;
+}
+
+#quote p {
+    font-style: normal;
+    font-size: 10px;
 }
 
 .control {
     width: 300px;
     margin-top: 15px;
-}
-
-#sign-up-button {
-    margin-top: 20px;
-    position: absolute;
-    left: 160px;
-}
-
-#sign-in-text {
-    position: absolute;
-    top: 300px;
-    left: 15px;
-    color: white;
 }
 
 #sign-in-button {
@@ -40,61 +58,44 @@ body {
     color: white;
 }
 
+/* The "Sign In" Page Style */
 #sign-in-container {
-    display: none;
     height: 600px;
     position: relative;
-    padding-left: 13%;
+    left: 13%;
+    display: none;
 }
 
 #sign-in-button-two {
-    margin-top: 20px;
     position: absolute;
-    left: 160px;
-    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    top: 150px;
+    left: 100px;
 }
 
+/* The Holiday Input Page Style */
 #holiday-input-container {
-    display: none;
     height: 600px;
     position: relative;
-    padding-left: 25%;
-}
-
-#quote {
-    position: relative;
-    top: 100px;
-    left: -10px;
-    width: 350px;
-    font-size: 12px;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    font-style: italic;
-    color: white;
-}
-
-#quote p {
-    font-style: normal;
+    left: 15%;
+    display: none;
 }
 
 #sign-out-button {
     position: absolute;
     top:0px;
-    left:20px;
+    left: -40px;
     cursor: pointer;
     font-size: 12px;
     text-decoration: underline;
     color: white;
 }
 
-#sign-out-button-two {
+#holiday-submit-button {
     position: absolute;
-    top:0px;
-    left:20px;
-    cursor: pointer;
-    font-size: 12px;
-    text-decoration: underline;
-    color: white;
+    top: 410px;
+    left: 90px;
 }
 
 #destination-list {
@@ -121,37 +122,43 @@ body {
     margin-bottom: 20px; 
 }
 
-.holiday-input-button {
-    margin-top: 40px;
-    margin-right: 50px;
-    position: absolute;
-    top: -15px;
-    left: 60px;
-}
-
 #holiday-budget-result {
-    position: relative;
-    left: -80px;
-    width: 390px
-}
-
-.confirm-button {
-    position: absolute;
-    left: -90px;
-    top: 40px;
-}
-
-#holiday-budget-total {
-    width: 200px;
+    width: 300px;
     margin-top: 5px; 
     margin-bottom: 20px; 
 }
 
+.confirm-button {
+    position: absolute;
+    top:30px;
+    font-size: 10px;
+}
+
+/* The Expense Input Page Style*/
 #expense-input-container {
     display: none;
     height: 600px;
     position: relative;
-    padding-left: 20%;
+    left: 10px;
+}
+
+#sign-out-button-two {
+    position: absolute;
+    top:0px;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: underline;
+    color: white;
+}
+
+#expenseTitle {
+    position: absolute;
+    top: 50px;
+}
+
+#addExpenseButton {
+    position: absolute;
+    top: 100px;
 }
 
 .modal-content {
@@ -164,6 +171,7 @@ body {
     width: 80%;
 }
 
+/* The Error Modal Style*/
 .modal {
     display: none;
     position: fixed;
@@ -201,6 +209,7 @@ body {
   cursor: pointer;
 }
 
+/* The Expense Modal Style*/
 .expenseModal {
     display: none; 
     position: fixed; 
@@ -252,64 +261,72 @@ input[type=submit] {
     top: 280px;
 }
 
-@media screen and (min-width: 760px) {
-#sign-up-container {
-    padding-left: 30%;
-}
-
-#sign-up-button {
-    left: 340px;
-}
-
-#sign-in-text {
-    left: 25%;
-}
-
-#sign-in-container {
-    padding-left: 30%;
-}
-
-#sign-in-button-two {
-    left: 330px;
-}
-
-#holiday-submit-button {
+#expense-table {
     position: absolute;
-    left: 340px;
-    top: 300px
+    left: 0;
+    top: 250px;
+    background-color: white;
+    color: black;
+    border-radius: 25px;
 }
 
-#holiday-budget-result {
-    left: -80px;
-    width: fit-content;
-}
-.confirm-button {
-    left: -200px;
-}
+table {
+    border-collapse: collapse; 
 }
 
-@media screen and (min-width: 990px) {
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+  
+li {
+    padding: 5px;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Media Queries to make the Site responsive */
+@media screen and (min-width: 760px) {
+
 #sign-up-container {
-    padding-left: 35%;
-}
-    
-#sign-up-button {
-    left: 460px;
-}
-   
-#sign-in-text {
     left: 30%;
 }
 
 #sign-in-container {
-    padding-left: 35%;
+    left: 30%;
 }
 
-#sign-in-button-two {
-    left: 460px;
+#sign-out-button {
+    left: -100px;
 }
 
-.confirm-button {
-    left: 30px;
+#holiday-submit-button {
+    top: 320px;
+}
+
+#holiday-budget-result {
+    position: relative;
+    width: 650px;
+    left: -50px
+}
+}
+
+@media screen and (min-width: 990px) {
+
+#sign-up-container {
+    left: 40%;
+}
+    
+#sign-in-container {
+    left: 40%;
+}
+
+#holiday-input-container {
+    left: 30%;
+}
+
+#sign-out-button {
+    left: -320px;
 }
 }

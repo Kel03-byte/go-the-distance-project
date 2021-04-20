@@ -18,7 +18,8 @@
         <p class="subtitle is-4">Financial Holiday Planner</p>
     </div>
 
-    <div class="section" id="sign-up-container">
+    <!-- "Sign Up" Container -->
+    <div class="selection has-text-white" id="sign-up-container">
         <div class="control has-icons-left has-icons-right">
             <input class="input is-rounded" type="name" id="username" placeholder="Name">
             <span class="icon is-small is-left">
@@ -43,15 +44,15 @@
         <div>
             <button class="button is-info" id="sign-up-button">Sign Up</button>
         </div>
-        <div class="has-text-white" id="sign-in-text">
+        <div id="sign-in-text">
             <p>If you have already signed up then sign in <a id="sign-in-button">here!</a></p>
         </div>
 
         <div id="quote"></div>
-
     </div>
 
-    <div class="section" id="sign-in-container">
+    <!-- "Sign In" Container -->
+    <div class="selection" id="sign-in-container">
 
         <div class="control has-icons-left has-icons-right">
             <input class="input is-rounded" type="email" id="user-input-email" placeholder="Email">
@@ -71,6 +72,7 @@
 
     </div>
 
+    <!-- Holiday Input Container -->
     <div class="section has-text-white" id="holiday-input-container">
         <p id="sign-out-button">Sign Out</p>
 
@@ -102,15 +104,22 @@
 
     </div>
 
-    <div id="expense-input-container">
+    <!-- Expense Input Container -->
+    <div class="container has-text-white" id="expense-input-container">
 
-        <div><p id="sign-out-button-two">Sign Out</p></div>
-        <div class="has-text-white"id="expenseTitle"></div>
+        <div>
+            <p id="sign-out-button-two">Sign Out</p>
+        </div>
+
+        <div class="container">
+            <div class=" subtitle is-4 has-text-white" id="expenseTitle"></div>
+            <div id="total-spent"></div>
+            <button id="addExpenseButton" class="button is-success">Add Expense</button>
+        </div>
+
         <div id="expense-input-list"></div>
 
-        <button id="addExpenseButton" class="button is-info">Add Expense</button>
-
-        <!-- Modal container-->
+        <!-- Expense Input Modal -->
         <div id="expenseModal" class="expenseModal">
             <!-- Modal content -->
             <div class="modalContent">
@@ -132,8 +141,29 @@
                 </form>
             </div>
         </div>
+
+        <!-- Expense Input Table -->
+        <table style="width:90%" class="table has-text-centered" id="expense-table">
+            <tr>
+                <th>Expense</th>
+                <th>Amount</th>
+                <th>Catagory</th>
+            </tr>
+            <tr>
+                <td>
+                    <ul id="name-list"></ul>
+                </td>
+                <td>
+                    <ul id="amount-list"></ul>
+                </td>
+                <td>
+                    <ul id="catagory-list"></ul>
+                </td>
+            </tr>
+        </table>
     </div>
 
+    <!-- Error Modal -->
     <div id="pageModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -141,7 +171,7 @@
         </div>
 
     </div>
-    
+
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzeKsmf4v_Fu4sR7jyLifs-XZ4Qbd73VA&libraries=places&v=weekly"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="assests/script.js"></script>
