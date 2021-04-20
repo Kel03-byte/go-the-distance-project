@@ -173,3 +173,24 @@ input[type=submit]{
     left: 280px;
     top: 280px;
 }
+
+table{
+    border-collapse: collapse; 
+  }
+    
+  td, th {
+    border: 1px solid #dddddd;
+    
+  }
+    
+  ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  
+  li{
+    padding: 5px;
+    border-bottom: 1px solid #dddddd;
+  }

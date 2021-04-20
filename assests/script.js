@@ -203,6 +203,62 @@ submitButton.onclick = function (event) {
         console.log("please make a submission")
     }
 
+    addExpense.preventDefault();
+
+    var nameListEl = $('#name-list')
+
+    var expenseNameItem = $("<ul><li>" + expenseName + "</li></ul>");
+
+    expenseNameItem.appendTo(nameListEl);
+
+    $(expenseName);
+
+
+
+    var amountListEl = $('#amount-list')
+
+    var expenseAmountItem = $("<ul><li>" + expenseAmount + "</li></ul>");
+
+    expenseAmountItem.appendTo(amountListEl);
+
+    $(expenseAmount);
+
+
+
+    var catagoryListEl = $('#catagory-list')
+
+    var expenseCatagoryItem = $("<ul><li>" + expenseCatagory + "</li></ul>");
+
+    expenseCatagoryItem.appendTo(catagoryListEl);
+
+    $(expenseCatagory);
+
+
+    expenseModal.style.display = "none";
+
+
+    if (expenseCatagory === "Transportation") {
+        console.log("it worked")  
+        
+    }
+
+    else if (expenseCatagory === "Food") {
+        console.log("it worked2")
+
+        
+    }
+
+    else if (expenseCatagory === "Accomodation") {
+        console.log("it worked3")
+
+        
+    }
+
+    else if (expenseCatagory === "Entertainment") {
+        console.log("it worked4")
+
+        
+    }
 
 }
 
