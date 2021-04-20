@@ -54,7 +54,7 @@ function displayExpenseInputContainer() {
     expenseInputContainer.style.display = "block"
     expenseTitle.innerHTML = storedUserName + "'s " + storedDestination + " HOLIDAY!"
 }
- 
+
 //Function to fetch and display a random quote
 function displayQuote() {
     fetch("https://favqs.com/api/qotd")
@@ -166,10 +166,9 @@ function storeUserHolidayInput() {
     localStorage.setItem("Budget Total", budgetTotal)
 }
 
-
-//Event listeners to sign out, confirm holiday details, to go to the sign in again page
-// and when signing in again from the sign in page instead of the sign up page
-signUpButton.addEventListener('click', displayExpenseInputContainer)
+//Event listeners to "sign up", to sign out, to confirm holiday details, to go to the "sign in" page
+// and when signing in again from the "sign in" page instead of the sign up page
+signUpButton.addEventListener('click', signUpUser)
 signOutOneButton.addEventListener('click', function () { location.reload() });
 signOutTwoButton.addEventListener('click', function () { location.reload() });
 confirmButtonEl.addEventListener('click',
@@ -199,7 +198,8 @@ window.onclick = function (event) {
     }
 }
 
-//Variables and Function to display a modal for the user to input expense information in, which is saved to local storage
+//Variables and Function to display a modal for the user to input expense information in
+//which is saved to local storage
 var expenseModal = document.getElementById("expenseModal");
 var addExpenseButton = document.getElementById("addExpenseButton");
 var closeButton = document.getElementsByClassName("closeButton")[0];
@@ -214,107 +214,82 @@ closeButton.onclick = function () {
 
 var submitButton = document.getElementById("submitButton")
 
+//On submitting the expense values the inputted information is then saved to local storage and displayed in the table
 submitButton.onclick = function (event) {
     event.preventDefault();
     var expenseName = document.getElementById("expenseName").value;
-    localStorage.setItem ("expenseName", JSON.stringify(expenseName))
+    localStorage.setItem("expenseName", JSON.stringify(expenseName))
 
     var expenseAmount = document.getElementById("expenseAmount").value;
-    localStorage.setItem ("expenseAmount", JSON.stringify(expenseAmount))
+    localStorage.setItem("expenseAmount", JSON.stringify(expenseAmount))
 
     var expenseCatagory = document.getElementById("expenseCatagory").value;
-    localStorage.setItem ("expenseCatagory", JSON.stringify(expenseCatagory))
+    localStorage.setItem("expenseCatagory", JSON.stringify(expenseCatagory))
 
-    // console.log(expenseName)
-    // console.log(expenseAmount)
-    // console.log(expenseCatagory)
+    if (!expenseName) {
+        displayModal();
+        return
+    } else if (!expenseAmount) {
+        displayModal();
+    } else if (!expenseCatagory) {
+        displayModal();
+        return
+    } else {
+
+        var nameListEl = $('#name-list')
+
+        var expenseNameItem = $("<ul><li>" + expenseName + "</li></ul>");
+
+        expenseNameItem.appendTo(nameListEl);
+
+        $(expenseName);
 
 
-    if (expenseName == "") {
-        // displayModal();
-        console.log("please make a submission")
+
+        var amountListEl = $('#amount-list')
+
+        var expenseAmountItem = $("<ul><li>" + expenseAmount + "</li></ul>");
+
+        expenseAmountItem.appendTo(amountListEl);
+
+        $(expenseAmount);
+
+
+
+        var catagoryListEl = $('#catagory-list')
+
+        var expenseCatagoryItem = $("<ul><li>" + expenseCatagory + "</li></ul>");
+
+        expenseCatagoryItem.appendTo(catagoryListEl);
+
+        $(expenseCatagory);
+
+
+        expenseModal.style.display = "none";
+
+
+        if (expenseCatagory === "Transportation") {
+            console.log("it worked")
+
+        }
+
+        else if (expenseCatagory === "Food") {
+            console.log("it worked2")
+
+
+        }
+
+        else if (expenseCatagory === "Accomodation") {
+            console.log("it worked3")
+
+
+        }
+
+        else if (expenseCatagory === "Entertainment") {
+            console.log("it worked4")
+
+
+        }
+
     }
-
-    if (expenseAmount == "") {
-        // displayModal();
-        console.log("please make a submission")
-    }
-
-    if (expenseAmount != Number) {
-        // displayModal();
-        console.log("please submit a number")
-    }
-
-    if (expenseCatagory == "") {
-        // displayModal();
-        console.log("please make a submission")
-    }
-
-    
-
-    var nameListEl = $('#name-list')
-
-    var expenseNameItem = $("<ul><li>" + expenseName + "</li></ul>");
-
-    expenseNameItem.appendTo(nameListEl);
-
-    $(expenseName);
-
-
-
-    var amountListEl = $('#amount-list')
-
-    var expenseAmountItem = $("<ul><li>" + expenseAmount + "</li></ul>");
-
-    expenseAmountItem.appendTo(amountListEl);
-
-    $(expenseAmount);
-
-
-
-    var catagoryListEl = $('#catagory-list')
-
-    var expenseCatagoryItem = $("<ul><li>" + expenseCatagory + "</li></ul>");
-
-    expenseCatagoryItem.appendTo(catagoryListEl);
-
-    $(expenseCatagory);
-
-
-    expenseModal.style.display = "none";
-
-
-    if (expenseCatagory === "Transportation") {
-        console.log("it worked")  
-        
-    }
-
-    else if (expenseCatagory === "Food") {
-        console.log("it worked2")
-
-        
-    }
-
-    else if (expenseCatagory === "Accomodation") {
-        console.log("it worked3")
-
-        
-    }
-
-    else if (expenseCatagory === "Entertainment") {
-        console.log("it worked4")
-
-        
-    }
-
-}
-
-
-var expenseName = localStorage.getItem("expenseName")
-console.log(expenseName)
-
-var expenseAmount = localStorage.getItem("expenseAmount")
-console.log(expenseAmount)
-
-var expenseCatagory = localStorage.getItem("expenseCatagory")
-console.log(expenseCatagory)
+};

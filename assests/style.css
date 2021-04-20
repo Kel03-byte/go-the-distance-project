@@ -158,7 +158,6 @@ body {
 
 #addExpenseButton {
     position: absolute;
-    font-size: 10px;
     top: 100px;
 }
 
@@ -265,7 +264,7 @@ input[type=submit] {
 #expense-table {
     position: absolute;
     left: 0;
-    top: 150px;
+    top: 160px;
     background-color: white;
     color: black;
     border-radius: 25px;
