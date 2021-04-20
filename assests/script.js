@@ -121,9 +121,8 @@ function getUserInformation() {
 
 //Event listener to collect user's input
 holidaySubmitButton.addEventListener("click", function (event) {
-    var userDestinationList = document.getElementById("destination-list");
     var holidayResults = document.getElementById("holiday-budget-result")
-    var userDestination = userDestinationList.options[userDestinationList.selectedIndex].text;
+    var userDestination = document.getElementById("destination-list").value;
     var budgetTotal = document.getElementById("holiday-budget-total").value;
     var dateOne = document.getElementById('start-date').value
     var dateTwo = document.getElementById('end-date').value
@@ -131,7 +130,7 @@ holidaySubmitButton.addEventListener("click", function (event) {
     var endDate = moment(dateTwo).format("DD/MM/YYYY")
 
     //IF statements for when the user does/doesn't enter their input
-    if (userDestination == "---Destinations---") {
+    if (!userDestination) {
         displayModal();
         return
     } else if (!budgetTotal) {
@@ -160,7 +159,7 @@ holidaySubmitButton.addEventListener("click", function (event) {
 
 function storeUserHolidayInput (){
     var userDestinationList = document.getElementById("destination-list");
-    var userDestination = userDestinationList.options[userDestinationList.selectedIndex].text;
+    var userDestination = document.getElementById("destination-list").value;
     var budgetTotal = document.getElementById("holiday-budget-total").value;
     localStorage.setItem("Destination", userDestination)
     localStorage.setItem("Budget Total", budgetTotal)
@@ -244,16 +243,4 @@ submitButton.onclick = function (event) {
         displayModal()
         console.log("please make a submission")
     }
-<<<<<<< HEAD
-}
-=======
-}
-var expenseName = localStorage.getItem("expenseName")
-
-
-var expenseAmount = localStorage.getItem("expenseAmount")
-
-
-var expenseCatagory = localStorage.getItem("expenseCatagory")
-
->>>>>>> 85f0178becfd2ed145f6273b76dbbc5d9be69af7
+};
