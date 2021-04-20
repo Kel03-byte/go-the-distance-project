@@ -158,7 +158,6 @@ holidaySubmitButton.addEventListener("click", function (event) {
 });
 
 function storeUserHolidayInput (){
-    var userDestinationList = document.getElementById("destination-list");
     var userDestination = document.getElementById("destination-list").value;
     var budgetTotal = document.getElementById("holiday-budget-total").value;
     localStorage.setItem("Destination", userDestination)
@@ -244,3 +243,19 @@ submitButton.onclick = function (event) {
         console.log("please make a submission")
     }
 };
+
+//Auotcomplete for User Destination
+let map, latValue, lngValue;
+
+function autoComplete() {
+    var locationInput = document.querySelector('#destination-list');
+    var autocomplete = new google.maps.places.Autocomplete(locationInput);
+    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+        var city = autocomplete.getPlace();
+        latValue = city.geometry.location.lat();
+        lngValue = city.geometry.location.lng();
+        loadMap(latValue, lngValue, 14);
+    });
+}
+
+google.maps.event.addDomListener(window, 'load', autoComplete);
