@@ -262,6 +262,31 @@ input[type=submit] {
     top: 280px;
 }
 
+#expense-table {
+    position: absolute;
+    left: 0;
+    top: 150px;
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+}
+
+table {
+    border-collapse: collapse; 
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+  
+li {
+    padding: 5px;
+    border-bottom: 1px solid #dddddd;
+}
+
 /* Media Queries to make the Site responsive */
 @media screen and (min-width: 760px) {
 

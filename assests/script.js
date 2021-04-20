@@ -169,7 +169,7 @@ function storeUserHolidayInput() {
 
 //Event listeners to sign out, confirm holiday details, to go to the sign in again page
 // and when signing in again from the sign in page instead of the sign up page
-signUpButton.addEventListener('click', displayHolidayInputContainer)
+signUpButton.addEventListener('click', displayExpenseInputContainer)
 signOutOneButton.addEventListener('click', function () { location.reload() });
 signOutTwoButton.addEventListener('click', function () { location.reload() });
 confirmButtonEl.addEventListener('click',
@@ -215,34 +215,106 @@ closeButton.onclick = function () {
 var submitButton = document.getElementById("submitButton")
 
 submitButton.onclick = function (event) {
-    event.preventDefault()
-
+    event.preventDefault();
     var expenseName = document.getElementById("expenseName").value;
-    localStorage.setItem("expenseName", JSON.stringify(expenseName))
+    localStorage.setItem ("expenseName", JSON.stringify(expenseName))
 
     var expenseAmount = document.getElementById("expenseAmount").value;
-    localStorage.setItem("expenseAmount", JSON.stringify(expenseAmount))
+    localStorage.setItem ("expenseAmount", JSON.stringify(expenseAmount))
 
     var expenseCatagory = document.getElementById("expenseCatagory").value;
-    localStorage.setItem("expenseCatagory", JSON.stringify(expenseCatagory))
+    localStorage.setItem ("expenseCatagory", JSON.stringify(expenseCatagory))
+
+    // console.log(expenseName)
+    // console.log(expenseAmount)
+    // console.log(expenseCatagory)
+
 
     if (expenseName == "") {
-        displayModal()
+        // displayModal();
         console.log("please make a submission")
     }
 
     if (expenseAmount == "") {
-        displayModal()
+        // displayModal();
         console.log("please make a submission")
     }
 
     if (expenseAmount != Number) {
-        displayModal()
+        // displayModal();
         console.log("please submit a number")
     }
 
     if (expenseCatagory == "") {
-        displayModal()
+        // displayModal();
         console.log("please make a submission")
     }
-};
+
+    
+
+    var nameListEl = $('#name-list')
+
+    var expenseNameItem = $("<ul><li>" + expenseName + "</li></ul>");
+
+    expenseNameItem.appendTo(nameListEl);
+
+    $(expenseName);
+
+
+
+    var amountListEl = $('#amount-list')
+
+    var expenseAmountItem = $("<ul><li>" + expenseAmount + "</li></ul>");
+
+    expenseAmountItem.appendTo(amountListEl);
+
+    $(expenseAmount);
+
+
+
+    var catagoryListEl = $('#catagory-list')
+
+    var expenseCatagoryItem = $("<ul><li>" + expenseCatagory + "</li></ul>");
+
+    expenseCatagoryItem.appendTo(catagoryListEl);
+
+    $(expenseCatagory);
+
+
+    expenseModal.style.display = "none";
+
+
+    if (expenseCatagory === "Transportation") {
+        console.log("it worked")  
+        
+    }
+
+    else if (expenseCatagory === "Food") {
+        console.log("it worked2")
+
+        
+    }
+
+    else if (expenseCatagory === "Accomodation") {
+        console.log("it worked3")
+
+        
+    }
+
+    else if (expenseCatagory === "Entertainment") {
+        console.log("it worked4")
+
+        
+    }
+
+}
+
+
+var expenseName = localStorage.getItem("expenseName")
+console.log(expenseName)
+
+var expenseAmount = localStorage.getItem("expenseAmount")
+console.log(expenseAmount)
+
+var expenseCatagory = localStorage.getItem("expenseCatagory")
+console.log(expenseCatagory)
