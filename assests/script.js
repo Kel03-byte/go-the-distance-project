@@ -52,9 +52,9 @@ function displayExpenseInputContainer() {
     signInContainer.style.display = "none"
     holidayInputContainer.style.display = "none"
     expenseInputContainer.style.display = "block"
-    expenseTitle.innerHTML = storedUserName+"'s "+storedDestination+" Holiday!"
+    expenseTitle.innerHTML = storedUserName + "'s " + storedDestination + " HOLIDAY!"
 }
-
+ 
 //Function to fetch and display a random quote
 function displayQuote() {
     fetch("https://favqs.com/api/qotd")
@@ -68,9 +68,10 @@ function displayQuote() {
         })
 };
 
+//Signs the user up to the website
 function signUpUser(event) {
     event.preventDefault();
-    var userName = userNameInput.value;
+    var userName = userNameInput.value.trim().toUpperCase();
     var email = userEmailInput.value;
     var password = userPasswordInput.value;
 
@@ -122,7 +123,7 @@ function getUserInformation() {
 //Event listener to collect user's input
 holidaySubmitButton.addEventListener("click", function (event) {
     var holidayResults = document.getElementById("holiday-budget-result")
-    var userDestination = document.getElementById("destination-list").value;
+    var userDestination = document.getElementById("destination-list").value.trim().toUpperCase();
     var budgetTotal = document.getElementById("holiday-budget-total").value;
     var dateOne = document.getElementById('start-date').value
     var dateTwo = document.getElementById('end-date').value
@@ -152,14 +153,14 @@ holidaySubmitButton.addEventListener("click", function (event) {
             ' with $' + budgetTotal + ' to spend while on holiday, is that correct?'
         holidayResults.append();
         confirmButtonEl.textContent = "Confirm"
-        confirmButtonEl.classList = "button is-info confirm-button"
+        confirmButtonEl.classList = "button is-success confirm-button"
         holidayResults.appendChild(confirmButtonEl)
     }
 });
 
-function storeUserHolidayInput (){
-    var userDestinationList = document.getElementById("destination-list");
-    var userDestination = document.getElementById("destination-list").value;
+//Stores Holiday Information into local storage
+function storeUserHolidayInput() {
+    var userDestination = document.getElementById("destination-list").value.trim().toUpperCase();
     var budgetTotal = document.getElementById("holiday-budget-total").value;
     localStorage.setItem("Destination", userDestination)
     localStorage.setItem("Budget Total", budgetTotal)
@@ -168,7 +169,7 @@ function storeUserHolidayInput (){
 
 //Event listeners to sign out, confirm holiday details, to go to the sign in again page
 // and when signing in again from the sign in page instead of the sign up page
-signUpButton.addEventListener('click', signUpUser)
+signUpButton.addEventListener('click', displayHolidayInputContainer)
 signOutOneButton.addEventListener('click', function () { location.reload() });
 signOutTwoButton.addEventListener('click', function () { location.reload() });
 confirmButtonEl.addEventListener('click',
@@ -198,6 +199,7 @@ window.onclick = function (event) {
     }
 }
 
+//Variables and Function to display a modal for the user to input expense information in, which is saved to local storage
 var expenseModal = document.getElementById("expenseModal");
 var addExpenseButton = document.getElementById("addExpenseButton");
 var closeButton = document.getElementsByClassName("closeButton")[0];
