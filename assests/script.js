@@ -168,7 +168,7 @@ function storeUserHolidayInput() {
 
 //Event listeners to "sign up", to sign out, to confirm holiday details, to go to the "sign in" page
 // and when signing in again from the "sign in" page instead of the sign up page
-signUpButton.addEventListener('click', displayExpenseInputContainer)
+signUpButton.addEventListener('click', signUpUser)
 signOutOneButton.addEventListener('click', function () { location.reload() });
 signOutTwoButton.addEventListener('click', function () { location.reload() });
 confirmButtonEl.addEventListener('click',
@@ -305,11 +305,7 @@ function autoComplete() {
         var city = autocomplete.getPlace();
         latValue = city.geometry.location.lat();
         lngValue = city.geometry.location.lng();
-        loadMap(latValue, lngValue, 14);
     });
 }
 
 google.maps.event.addDomListener(window, 'load', autoComplete);
-
-};
-
