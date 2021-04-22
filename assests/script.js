@@ -292,4 +292,24 @@ submitButton.onclick = function (event) {
         }
 
     }
+
 };
+
+//Auotcomplete for User Destination
+let map, latValue, lngValue;
+
+function autoComplete() {
+    var locationInput = document.querySelector('#destination-list');
+    var autocomplete = new google.maps.places.Autocomplete(locationInput);
+    google.maps.event.addListener(autocomplete, 'place_changed', function () {
+        var city = autocomplete.getPlace();
+        latValue = city.geometry.location.lat();
+        lngValue = city.geometry.location.lng();
+        loadMap(latValue, lngValue, 14);
+    });
+}
+
+google.maps.event.addDomListener(window, 'load', autoComplete);
+
+};
+
